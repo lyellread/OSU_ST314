@@ -1,31 +1,16 @@
-# PART 2 ############################################## 
-###### Enter Gamma parameter values ###################
-# Alpha and Beta may be any positive values. 
-alpha = 2
-beta = 7
-
-# Define Number of Observations  
-observations = 1000
-
-####### Simulation ####################################
-####### HIGHLIGHT AND RUN ENTIRE SECTION ##############
-####### You may run this multiple times  ##############
-
-#Simulates Gamma Random Variable 
-RV = rgamma(observations,alpha,1/beta)
-
-# Plots Random Variable
-hist(RV, freq = FALSE, col = "dodgerblue", breaks = 100, 
-     main = "Gamma Random Variable Values with Density Curve", 
-     xlim=c(0,max(RV)+sqrt(alpha*beta^2)))
-
-# Plots Probability Density Curve
-x.range =  seq(0, max(RV)+2*sqrt(alpha*beta^2), 0.01)
-pdf = dgamma(x.range,alpha,1/beta)
-lines(x.range, pdf, lwd = 4)
-
-#Actual Proportion of values below 3
-Proportion = sum(RV<4)/observations
-Proportion
-
-##### End of Simulation ################################
+##########################################################################################
+# Use R to create a stemplot
+# Copy the data and code below
+# Run the code in R
+#time=c(116.8-50, 115.5-50, 114.6-50, 115.4-50, 115.6-50)
+time = c(116.8,115.9,114.8,115.1,115.8)
+)
+for (val in time){
+  print(val-mean(time))
+}
+options(digits=10)
+mean(time)
+var(time)
+sd(time)
+#Note: If your stems from R are not the same as below. Change 1 in the stem function to 2.
+##########################################################################################
