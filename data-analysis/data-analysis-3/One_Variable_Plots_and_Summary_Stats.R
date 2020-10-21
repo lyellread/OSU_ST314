@@ -27,9 +27,9 @@ n
 # Example: st314data$SubjectPreffered 
 # Choose a different categorical variable for your analysis!
 
-table(st314data$SubjectPreferred)
-barplot(table(st314data$SubjectPreferred), 
-        main = "Subject Preferred by ST314 Fall Students",
+table(st314data$Roommates)
+barplot(table(st314data$Roommates), 
+        main = "Number of Roommates, for Fall 2020 ST 314 Students",
         col = c("blue","green"))
 
 
@@ -44,7 +44,7 @@ barplot(table(st314data$SubjectPreferred),
 # Use the hist() command and define the variable from the dataset. 
 # dataset$variable, $ tells R "use this variable from this dataset". 
 
-hist(st314data$Email)
+hist(st314data$Salary)
 
 # The basic histogram is ugly. Should add a title and some color. 
 # Add a title with main = " Title" 
@@ -52,9 +52,9 @@ hist(st314data$Email)
 # Add color with col = "blue" (or "red" or "orange" etc...)
 # More graphical options can be explored at help(hist)
 
-hist(st314data$Email, 
-     main = "ST314 Winter 2019 Students: Email Count", 
-     xlab = "Number of emails over 24 hour period", 
+hist(st314data$Salary, 
+     main = "ST314 Fall 2020 Salary", 
+     xlab = "Salary ($)", 
      col = "dodgerblue")
 
 
@@ -66,26 +66,26 @@ hist(st314data$Email,
 # Graphical options are the essentially the same as histogram. 
 # More graphical options can be explored at help(boxplot)
 
-boxplot(st314data$Email, 
-     main = "ST314 Winter 2019 Students: Email Count", 
-     xlab = "Number of emails over 24 hour period", 
+boxplot(st314data$Salary, 
+        main = "ST314 Fall 2020 Salary", 
+        xlab = "Salary ($)", 
      col = "dodgerblue")
 
 # This plot is vertical. 
 #Make is horizontal by adding , horizontal = TRUE) 
 
-boxplot(st314data$Email, 
-        main = "ST314 Winter 2019 Students: Email Count", 
-        xlab = "Number of emails over 24 hour period", 
+boxplot(st314data$Salary, 
+        main = "ST314 Fall 2020 Salary", 
+        xlab = "Salary ($)", 
         col = "dodgerblue", horizontal = TRUE)
 
 # Calculate the summary statistics for your chosen variable. 
 
 # Calculate the "Five Number Summary" and the mean with summary()
-summary(st314data$Email)
+summary(st314data$Salary)
 
 # Calculate the Sample Standard Deviation sd()
-sd(st314data$Email)
+sd(st314data$Salary)
 
 
 
