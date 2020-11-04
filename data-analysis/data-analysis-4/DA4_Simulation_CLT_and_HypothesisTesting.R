@@ -89,6 +89,9 @@ sd(samp.means)
 # Creates vector of 10000 z test statistics 
 z.stats = (samp.means - mu)/(sigma/sqrt(n))
 
+mean(z.stats)
+sd(z.stats)
+
 #Plots 10000 z test statistics 
 hist(z.stats, main = "Histogram of 10000 z statistics", col = "violet", 
      xlab = "z",breaks = 100)
