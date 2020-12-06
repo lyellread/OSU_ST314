@@ -27,8 +27,12 @@ attach(examdata)
 #     1.	Graphically: Create a scatterplot and describe your data commenting on the direction, 
 #         strength and form and any outliers.  Recall, x is the explanatory variable and y is 
 #         the observed response. 
-# R Scatterplot: 
-  plot(x,y, main = "put your title here")
+# R Scatterplot:
+  
+  x = Midterm
+  y = Final
+  
+  plot(Midterm,Final, main = "Midterm vs Final Comparison")
 
 #     2.	Numerically: Calculate the correlation coefficient r to summarize the linear relationship. 
 #      a. Note: If the relationship is obviously not linear then the correlation coefficient will 
@@ -40,7 +44,7 @@ attach(examdata)
 #     1.	Calculate the least-square regression line but only to be able to check conditions using 
 #         a residual plot of the model. 
 # R Calculate the least -squares regression line:
-  
+  # 
   mod = lm(y~x)
   summary(mod) #note here the line has been named mod
 
